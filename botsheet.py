@@ -8,18 +8,18 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMa
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters
 from datetime import datetime
 
-bot_token = '6905591584:AAHAKjWUvEX5tZ5XkPUIzUv12I0d6aAf4gA'  # Ganti dengan token bot Anda
+bot_token = '_________'  # Ganti dengan token bot Anda
 
 gauth = GoogleAuth()
 gauth.credentials = ServiceAccountCredentials.from_json_keyfile_name(
-    'penyakitlombok-396692ec95bf.json', 
+    '_________', 
     scopes=['https://www.googleapis.com/auth/drive'])
 drive = GoogleDrive(gauth)
 
 gc = gspread.authorize(gauth.credentials)
 
 # ID spreadsheet Google Sheets
-spreadsheet_id = '15Ci-7AqYHvzznvsXP46c7bCnfPKGR0usUSs622aNL6Q'
+spreadsheet_id = '________'
 sheet = gc.open_by_key(spreadsheet_id).sheet1
 
 bot = telegram.Bot(token=bot_token)
